@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SRSDataSet" targetNamespace="http://tempuri.org/SRSDataSet.xsd" xmlns:mstns="http://tempuri.org/SRSDataSet.xsd" xmlns="http://tempuri.org/SRSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SRSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SRSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Driving.Properties.Settings.GlobalReference.Default.SRSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RaspisaniyeTableAdapter" GeneratorDataComponentClassName="RaspisaniyeTableAdapter" Name="Raspisaniye" UserDataComponentName="RaspisaniyeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SRSConnectionString (Settings)" DbObjectName="SRS.dbo.Raspisaniye" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CursID, CursName, Instructor, Student, CarName, CursSalary, SDate, EDate FROM dbo.Raspisaniye</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CursID" DataSetColumn="CursID" />
+              <Mapping SourceColumn="CursName" DataSetColumn="CursName" />
+              <Mapping SourceColumn="Instructor" DataSetColumn="Instructor" />
+              <Mapping SourceColumn="Student" DataSetColumn="Student" />
+              <Mapping SourceColumn="CarName" DataSetColumn="CarName" />
+              <Mapping SourceColumn="CursSalary" DataSetColumn="CursSalary" />
+              <Mapping SourceColumn="SDate" DataSetColumn="SDate" />
+              <Mapping SourceColumn="EDate" DataSetColumn="EDate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SRSConnectionString (Settings)" DbObjectName="SRS.dbo.Raspisaniye" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT    CursID, CursName, Instructor, Student, CarName, CursSalary, SDate, EDate
+FROM         Raspisaniye</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SRSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SRSDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SRSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Raspisaniye" msprop:Generator_RowClassName="RaspisaniyeRow" msprop:Generator_RowEvHandlerName="RaspisaniyeRowChangeEventHandler" msprop:Generator_RowDeletedName="RaspisaniyeRowDeleted" msprop:Generator_RowDeletingName="RaspisaniyeRowDeleting" msprop:Generator_RowEvArgName="RaspisaniyeRowChangeEvent" msprop:Generator_TablePropName="Raspisaniye" msprop:Generator_RowChangedName="RaspisaniyeRowChanged" msprop:Generator_UserTableName="Raspisaniye" msprop:Generator_RowChangingName="RaspisaniyeRowChanging" msprop:Generator_TableClassName="RaspisaniyeDataTable" msprop:Generator_TableVarName="tableRaspisaniye">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CursID" msprop:Generator_UserColumnName="CursID" msprop:Generator_ColumnPropNameInTable="CursIDColumn" msprop:Generator_ColumnPropNameInRow="CursID" msprop:Generator_ColumnVarNameInTable="columnCursID" type="xs:int" />
+              <xs:element name="CursName" msprop:Generator_UserColumnName="CursName" msprop:Generator_ColumnPropNameInTable="CursNameColumn" msprop:Generator_ColumnPropNameInRow="CursName" msprop:Generator_ColumnVarNameInTable="columnCursName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Instructor" msprop:Generator_UserColumnName="Instructor" msprop:Generator_ColumnPropNameInTable="InstructorColumn" msprop:Generator_ColumnPropNameInRow="Instructor" msprop:Generator_ColumnVarNameInTable="columnInstructor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Student" msprop:Generator_UserColumnName="Student" msprop:Generator_ColumnPropNameInTable="StudentColumn" msprop:Generator_ColumnPropNameInRow="Student" msprop:Generator_ColumnVarNameInTable="columnStudent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CarName" msprop:Generator_UserColumnName="CarName" msprop:Generator_ColumnPropNameInTable="CarNameColumn" msprop:Generator_ColumnPropNameInRow="CarName" msprop:Generator_ColumnVarNameInTable="columnCarName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CursSalary" msprop:Generator_UserColumnName="CursSalary" msprop:Generator_ColumnPropNameInTable="CursSalaryColumn" msprop:Generator_ColumnPropNameInRow="CursSalary" msprop:Generator_ColumnVarNameInTable="columnCursSalary" type="xs:int" minOccurs="0" />
+              <xs:element name="SDate" msprop:Generator_UserColumnName="SDate" msprop:Generator_ColumnPropNameInTable="SDateColumn" msprop:Generator_ColumnPropNameInRow="SDate" msprop:Generator_ColumnVarNameInTable="columnSDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EDate" msprop:Generator_UserColumnName="EDate" msprop:Generator_ColumnPropNameInTable="EDateColumn" msprop:Generator_ColumnPropNameInRow="EDate" msprop:Generator_ColumnVarNameInTable="columnEDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Raspisaniye" />
+      <xs:field xpath="mstns:CursID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
